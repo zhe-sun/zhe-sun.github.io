@@ -16,30 +16,29 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 
 ## DCOS ##
 
-1.	Example for mesos-slave  
+1.	Example for mesos-slave
 
-	```
-			$ vim dcos-mesos-slave.service  
+
+	$ vim dcos-mesos-slave.service  
 					
-			[Unit]
-			Description=Mesos Agent: DCOS Mesos Agent Service   
-			[Service]
-			Restart=always
-			StartLimitInterval=0
-			RestartSec=5
-			KillMode=control-group
-			Delegate=true
-			LimitNOFILE=infinity
-			EnvironmentFile=/opt/mesosphere/environment
-			EnvironmentFile=/opt/mesosphere/etc/mesos-slave-common
-			EnvironmentFile=/opt/mesosphere/etc/mesos-slave
-			EnvironmentFile=-/var/lib/dcos/mesos-slave-common
-			EnvironmentFile=/var/lib/dcos/mesos-resources
-			ExecStartPre=/bin/ping -c1 ready.spartan
-			ExecStartPre=/bin/ping -c1 leader.mesos
-			ExecStart=/opt/mesosphere/packages/mesos--bcd3532be711ab9e0828c963c07a5a0581ca0757/bin/mesos-slave
-			EnvironmentFile=-/var/lib/dcos/environment.proxy  
-	```
+	[Unit]
+	Description=Mesos Agent: DCOS Mesos Agent Service   
+	[Service]
+	Restart=always
+	StartLimitInterval=0
+	RestartSec=5
+	KillMode=control-group
+	Delegate=true
+	LimitNOFILE=infinity
+	EnvironmentFile=/opt/mesosphere/environment
+	EnvironmentFile=/opt/mesosphere/etc/mesos-slave-common
+	EnvironmentFile=-/var/lib/dcos/mesos-slave-common
+	EnvironmentFile=/var/lib/dcos/mesos-resources
+	ExecStartPre=/bin/ping -c1 ready.spartan
+	ExecStartPre=/bin/ping -c1 leader.mesos
+	ExecStart=/opt/mesosphere/packages/mesos--bcd3532be711ab9e0828c963c07a5a0581ca0757/bin/mesos-slave
+	EnvironmentFile=-/var/lib/dcos/environment.proxy    
+  
 
 2.	In the file, the /opt/mesosphere/etc/mesos-slave-common is very important.
 
