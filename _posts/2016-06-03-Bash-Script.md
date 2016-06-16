@@ -136,17 +136,23 @@ $* #the all of variable of dliveried to script(as a character string)
   
 ### Debug ###
 
-1. Grammar Check to the Script  
+1.Grammar Check to the Script  
 
-		bash -n myscript.sh
+```bash
+bash -n myscript.sh
+```
 
-2. Trace the executing cmd in Script  
+2.Trace the executing cmd in Script  
 
-		bash -v myscript.sh 
+```bash
+bash -v myscript.sh 
+```
 
-3. Trace the executing cmd and extend the information in Script  
+3.Trace the executing cmd and extend the information in Script  
 
-		bash -x myscript.sh
+```bash
+bash -x myscript.sh
+```
 
 > **Note:**  
 > You can use `set -o verbose` and `set -o xtrace` in front of the script to assign `-v` `-x` eternally.  
