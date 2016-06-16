@@ -16,8 +16,7 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 
 ## DCOS ##
 
-1.	Example for mesos-slave
-
+1.Example for mesos-slave  
 
 	$ vim dcos-mesos-slave.service  
 					
@@ -40,9 +39,8 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 	EnvironmentFile=-/var/lib/dcos/environment.proxy    
   
 
-2.	In the file, the /opt/mesosphere/etc/mesos-slave-common is very important.
+2.In the file, the /opt/mesosphere/etc/mesos-slave-common is very important.
 
-	```
 		$ vim /opt/mesosphere/etc/mesos-slave-common
 				
 		MESOS_MASTER=zk://leader.mesos:2181/mesos
@@ -62,7 +60,7 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 		MESOS_HOSTNAME_LOOKUP=false
 		GLOG_drop_log_memory=false
 		MESOS_HOOKS=com_mesosphere_StatsEnvHook
-	```
+
 
 3. Find the "MESOS_ISOLATION" in <kbd>/opt/mesosphere/packages/dcos-image--75d4ba1419141c3d791b9eaa90f4483503b17777/lib/python3.4/site-packages/gen/dcos-config.yaml</kbd>   
 In the dcos-config.yaml:   
