@@ -19,7 +19,7 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 
 1. Example for mesos-slave  
 
-	```
+```
 		$ vim dcos-mesos-slave.service  
 		
 		[Unit]
@@ -40,7 +40,7 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 		ExecStartPre=/bin/ping -c1 leader.mesos
 		ExecStart=/opt/mesosphere/packages/mesos--bcd3532be711ab9e0828c963c07a5a0581ca0757/bin/mesos-slave
 		EnvironmentFile=-/var/lib/dcos/environment.proxy  
-	```
+```
   
 2.  In the file, the /opt/mesosphere/etc/mesos-slave-common is very important.
 
