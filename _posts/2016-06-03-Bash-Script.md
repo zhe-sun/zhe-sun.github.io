@@ -1,10 +1,11 @@
 ---
-layout: post  
-title: Bash Script  
-date: 2016-06-03  
-categories: blog  
-tags: [Bash]  
-description: Bash Script  
+layout: post
+title: Bash Script
+description: "Learning Bash Script"
+modified: 2016-06-03
+tags: [Bash]
+image:
+  feature: abstract-10.jpg
 
 ---
 

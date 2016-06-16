@@ -1,10 +1,11 @@
 ---
 layout: post
-title: The Framwork Of Mesos
-date: 2016-05-28
-categories: blog
-tags: [Mesos]
-description: Working on Mesos
+title: The Framework Of Mesos
+description: "Learning Mesos"
+modified: 2016-05-28
+tags: [Mesos Framework]
+image:
+  feature: abstract-10.jpg
 
 ---
 
