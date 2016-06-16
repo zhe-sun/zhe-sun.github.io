@@ -19,7 +19,7 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 
 1. Example for mesos-slave
 
-	```css
+	```
 	$ vim dcos-mesos-slave.service  
 	
 	[Unit]
@@ -44,7 +44,7 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
   
 2.  In the file, the /opt/mesosphere/etc/mesos-slave-common is very important.
 
-	```css
+	```
 	$ vim /opt/mesosphere/etc/mesos-slave-common
 			
 	MESOS_MASTER=zk://leader.mesos:2181/mesos
@@ -86,7 +86,7 @@ In the dcos-config.yaml:
 	```
 5. Then in __default-isolation-modules, the content is below:  
 
-	```css
+	```
 	__default_isolation_modules = [
 		'cgroups/cpu',
 	    'cgroups/mem',
