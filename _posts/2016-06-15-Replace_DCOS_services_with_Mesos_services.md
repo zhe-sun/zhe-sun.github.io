@@ -62,7 +62,7 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 	MESOS_HOOKS=com_mesosphere_StatsEnvHook
 
 
-3.Find the "MESOS_ISOLATION" in <kbd>/opt/mesosphere/packages/dcos-image--75d4ba1419141c3d791b9eaa90f4483503b17777/lib/python3.4/site-packages/gen/dcos-config.yaml</kbd>   
+3.Find the "MESOS_ISOLATION" in `/opt/mesosphere/packages/dcos-image--75d4ba1419141c3d791b9eaa90f4483503b17777/lib/python3.4/site-packages/gen/dcos-config.yaml`   
 In the dcos-config.yaml:   
 
 	...
@@ -70,8 +70,8 @@ In the dcos-config.yaml:
 	...   
 
 
-4.Then we find <kbd>mesos_isolation_modules</kbd> in    
-<kbd>/opt/mesosphere/packages/dcos-image--75d4ba1419141c3d791b9eaa90f4483503b17777/lib/python3.4/site-packages/gen/calc.py</kbd>   
+4.Then we find `mesos_isolation_modules` in    
+`/opt/mesosphere/packages/dcos-image--75d4ba1419141c3d791b9eaa90f4483503b17777/lib/python3.4/site-packages/gen/calc.py`   
 
 	...
 	'mesos_isolation_modules': ','.join(__default_isolation_modules + [
@@ -88,14 +88,14 @@ In the dcos-config.yaml:
 	]  
 	```
 
-6.About <kbd>__stats-isolator-slave-module-name</kbd>:  
+6.About `__stats-isolator_slave_module_name`:  
 
 	...
 	__stats_isolator_slave_module_name = 'com_mesosphere_StatsIsolatorModule'
 	...   
 
 
-7.And <kbd>--stats-isolator-slave-module-name</kbd> is in <kbd>_stats-slave-module</kbd>:  
+7.And `__stats_isolator_slave_module_name` is in `_stats_slave_module`:  
 
 
 	__stats_slave_module = {
@@ -118,7 +118,7 @@ In the dcos-config.yaml:
 	}
 
 
-8.And where is the <kbd>--stats-slave-module</kbd>?
+8.And where is the `__stats_slave_module`?
   
 
 	entry { 
@@ -129,7 +129,7 @@ In the dcos-config.yaml:
 		}
 
 
-9.The file <kbd>--default-mesos-slave-modules</kbd>:  
+9.The file `__default_mesos_slave_modules`:  
 
 
 	__default_mesos_slave_modules = [
@@ -137,7 +137,7 @@ In the dcos-config.yaml:
 	]
 
 
-10.The contents of <kbd>--logrotate-slave-module</kbd>:  
+10.The contents of `__logrotate_slave_module`:  
 
 	__logrotate_slave_module = {
 			 'file': '/opt/mesosphere/lib/liblogrotate_container_logger.so',
@@ -154,7 +154,7 @@ In the dcos-config.yaml:
 	}
 
 
-11.Where is the <kbd>mesos_slave-modules_json</kbd>:  <kbd>/opt/mesosphere/packages/dcos-image--75d4ba1419141c3d791b9eaa90f4483503b17777/lib/python3.4/site-packages/gen/dcos-config.yaml</kbd>  
+11.Where is the `mesos_slave_modules_json`:  `/opt/mesosphere/packages/dcos-image--75d4ba1419141c3d791b9eaa90f4483503b17777/lib/python3.4/site-packages/gen/dcos-config.yaml`  
 
 	package {
 	...
