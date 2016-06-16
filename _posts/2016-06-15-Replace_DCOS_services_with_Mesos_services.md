@@ -16,7 +16,7 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 
 ## DCOS ##
 
-1.          Example for mesos-slave  
+1.	Example for mesos-slave  
 
 	```
 			$ vim dcos-mesos-slave.service  
@@ -41,7 +41,7 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 			EnvironmentFile=-/var/lib/dcos/environment.proxy  
 	```
 
-2.  In the file, the /opt/mesosphere/etc/mesos-slave-common is very important.
+2.	In the file, the /opt/mesosphere/etc/mesos-slave-common is very important.
 
 	```
 	$ vim /opt/mesosphere/etc/mesos-slave-common
