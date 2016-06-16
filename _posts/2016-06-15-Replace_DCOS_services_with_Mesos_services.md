@@ -44,25 +44,25 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 2.	In the file, the /opt/mesosphere/etc/mesos-slave-common is very important.
 
 	```
-	$ vim /opt/mesosphere/etc/mesos-slave-common
-			
-	MESOS_MASTER=zk://leader.mesos:2181/mesos
-	MESOS_CONTAINERIZERS=docker,mesos
-	MESOS_LOG_DIR=/var/log/mesos
-	MESOS_MODULES=file:///opt/mesosphere/etc/mesos-slave-modules.json
-	MESOS_CONTAINER_LOGGER=org_apache_mesos_LogrotateContainerLogger
-	MESOS_ISOLATION=cgroups/cpu,cgroups/mem,posix/disk,com_mesosphere_StatsIsolatorModule
-	MESOS_WORK_DIR=/var/lib/mesos/slave
-	MESOS_SLAVE_SUBSYSTEMS=cpu,memory
-	MESOS_EXECUTOR_ENVIRONMENT_VARIABLES=file:///opt/mesosphere/etc/mesos-executor-environment.json
-	MESOS_EXECUTOR_REGISTRATION_TIMEOUT=10mins
-	MESOS_CGROUPS_ENABLE_CFS=true
-	MESOS_CGROUPS_LIMIT_SWAP=false
-	MESOS_DOCKER_REMOVE_DELAY=1hrs
-	MESOS_GC_DELAY=2days
-	MESOS_HOSTNAME_LOOKUP=false
-	GLOG_drop_log_memory=false
-	MESOS_HOOKS=com_mesosphere_StatsEnvHook
+		$ vim /opt/mesosphere/etc/mesos-slave-common
+				
+		MESOS_MASTER=zk://leader.mesos:2181/mesos
+		MESOS_CONTAINERIZERS=docker,mesos
+		MESOS_LOG_DIR=/var/log/mesos
+		MESOS_MODULES=file:///opt/mesosphere/etc/mesos-slave-modules.json
+		MESOS_CONTAINER_LOGGER=org_apache_mesos_LogrotateContainerLogger
+		MESOS_ISOLATION=cgroups/cpu,cgroups/mem,posix/disk,com_mesosphere_StatsIsolatorModule
+		MESOS_WORK_DIR=/var/lib/mesos/slave
+		MESOS_SLAVE_SUBSYSTEMS=cpu,memory
+		MESOS_EXECUTOR_ENVIRONMENT_VARIABLES=file:///opt/mesosphere/etc/mesos-executor-environment.json
+		MESOS_EXECUTOR_REGISTRATION_TIMEOUT=10mins
+		MESOS_CGROUPS_ENABLE_CFS=true
+		MESOS_CGROUPS_LIMIT_SWAP=false
+		MESOS_DOCKER_REMOVE_DELAY=1hrs
+		MESOS_GC_DELAY=2days
+		MESOS_HOSTNAME_LOOKUP=false
+		GLOG_drop_log_memory=false
+		MESOS_HOOKS=com_mesosphere_StatsEnvHook
 	```
 
 3. Find the "MESOS_ISOLATION" in <kbd>/opt/mesosphere/packages/dcos-image--75d4ba1419141c3d791b9eaa90f4483503b17777/lib/python3.4/site-packages/gen/dcos-config.yaml</kbd>   
