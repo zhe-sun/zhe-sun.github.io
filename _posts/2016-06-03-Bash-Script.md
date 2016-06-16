@@ -65,7 +65,7 @@ String comparison can also be used as Globbing to the `case` statement:
 
 ### String Operations ###
 
-1. Basic Operations  
+1.Basic Operations  
 
 		f="path1/path2/file.ext"  
 
@@ -79,19 +79,21 @@ String comparison can also be used as Globbing to the `case` statement:
 	    len=5
 	    slice4="${f:${pos}:${len}}" # = "path2"
 
-2. Replacement Operation  
+2.Replacement Operation  
 
-	    f="path1/path2/file.ext"  
-	
-	    single_subst="${f/path?/x}"   # = "x/path2/file.ext"
-	    global_subst="${f//path?/x}"  # = "x/x/file.ext" 
-	
-	    # splitting strings
-	    readonly DIR_SEP="/"
-	    array=(${f//${DIR_SEP}/ })
-	    second_dir="${arrray[1]}"     # = path2
 
-3. Remove the head or tail  
+```java
+	f="path1/path2/file.ext"  
+	
+	single_subst="${f/path?/x}"   # = "x/path2/file.ext"
+	global_subst="${f//path?/x}"  # = "x/x/file.ext" 
+	
+	# splitting strings
+	readonly DIR_SEP="/"
+	array=(${f//${DIR_SEP}/ })
+	second_dir="${arrray[1]}"     # = path2
+```
+3.Remove the head or tail  
 
 	    f="path1/path2/file.ext" 
 	
