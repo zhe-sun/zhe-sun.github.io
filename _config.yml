@@ -1,5 +1,5 @@
-title:            Site Title
-description:      Describe your website here.
+title:            Ryan S. Blog
+description:      Whatever is worth doing is worth doing well.
 disqus_shortname: 
 reading_time:     true
 words_per_minute: 200
@@ -9,9 +9,10 @@ url:		https://sun-zhe.github.io
 
 # Owner/author information
 owner:
-  name:           Sun-zhe
+  name:           Sun-zhe(Ryan)
   avatar:         sunzhe.png
-  bio:            "2013-2016 worked for ICT.   2016-Now working for HPE."
+  bio:            "	2013-2016 worked for ICT.   
+  			2016-Now working for HPE."
   email:          sunzhe.micro@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        

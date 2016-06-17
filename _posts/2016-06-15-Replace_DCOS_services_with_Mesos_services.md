@@ -2,10 +2,12 @@
 layout: post
 title: Replace DC/OS services with Mesos's
 description: "Test for replace DC/OS services with Mesos's"
+comments: true
 modified: 2016-06-15T15:27:45-04:00
 tags: [Mesos DC/OS]
 image:
   feature: abstract-10.jpg
+
 ---
 
 
@@ -18,7 +20,7 @@ In this test, we can know the correlation between libs clearly. OK, let us have 
 
 1.Example for mesos-slave  
 
-```css
+```bash
 $ vim dcos-mesos-slave.service  
 					
 [Unit]
@@ -42,7 +44,7 @@ EnvironmentFile=-/var/lib/dcos/environment.proxy
 
 2.In the file, the /opt/mesosphere/etc/mesos-slave-common is very important.
 
-```css
+```bash
 $ vim /opt/mesosphere/etc/mesos-slave-common
 			
 MESOS_MASTER=zk://leader.mesos:2181/mesos
@@ -147,7 +149,7 @@ __default_mesos_slave_modules = [
 
 10.The contents of `__logrotate_slave_module`:  
 
-```
+```yaml
 __logrotate_slave_module = {
 		 'file': '/opt/mesosphere/lib/liblogrotate_container_logger.so',
 		 'modules': [{
@@ -169,9 +171,9 @@ __logrotate_slave_module = {
 ```yaml
 package {
 ...
-	- path: /etc/mesos-slave-modules.json
-	  content: |
-	  {{ mesos_slave_modules_json }}
+- path: /etc/mesos-slave-modules.json
+content: |
+{{ mesos_slave_modules_json }}
 ...
 }
 ```		
