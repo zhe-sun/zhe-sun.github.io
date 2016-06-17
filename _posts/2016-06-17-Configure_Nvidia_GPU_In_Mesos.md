@@ -6,6 +6,7 @@ image:
   credit: Sunzhe
 comments: true
 modified: 2016-06-17
+tags: [Mesos GPU]
 
 ---
 
@@ -62,7 +63,7 @@ Failed to determine slave resources: When specifying the gpus resource, you must
 Failed to determine slave resources: The number of GPUs passed in the --nvidia_gpu_devices flag must match the number of GPUs specified in the gpus resource
 	
 ./bin/mesos-slave.sh --master=127.0.0.1:5050 --resources="gpus:4.0" --nvidia_gpu_devices=1,2,3,4
-	SUCCESS
+SUCCESS
 ```
 
 > **NOTE:** I didn't set the --isolation flag here, so the agent actually started up correctly (i.e. it didn't error out saying that the Nvidia GPU isolator is currently unsupported).  This is the correct behaviour, and it properly exercises the code added in this patch.  

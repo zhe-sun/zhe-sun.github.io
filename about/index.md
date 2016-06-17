@@ -11,8 +11,9 @@ modified: 2016-06-17
 
 ### BIO ###
 
-2013-2016 worked for ICT.  
+Whatever is worth doing is worth doing well.
 
+2013-2016 worked for ICT.   
 2016-Now working for HPE.
 
 Others are coming...
