@@ -6,7 +6,7 @@ image:
   credit: Sunzhe
 comments: true
 modified: 2016-06-17
-tags: [Mesos GPU]
+tags: [Mesos]
 
 ---
 

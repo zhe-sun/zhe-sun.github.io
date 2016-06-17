@@ -5,7 +5,7 @@ description: "Test for replace DC/OS services with Mesos's"
 comments: true
 reading_time: true
 modified: 2016-06-15T15:27:45-04:00
-tags: [Mesos DC/OS]
+tags: [Mesos]
 image:
   feature: abstract-5.jpg
 

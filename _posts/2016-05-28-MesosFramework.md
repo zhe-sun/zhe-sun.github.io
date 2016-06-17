@@ -4,7 +4,7 @@ title: The Framework Of Mesos
 description: "Learning Mesos"
 reading_time: true
 modified: 2016-05-28
-tags: [Mesos Framework]
+tags: [Mesos]
 image:
   feature: abstract-10.jpg
 
