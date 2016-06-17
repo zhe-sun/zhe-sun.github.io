@@ -157,10 +157,9 @@ $ssh-keygen
 $cat id_rsa.pub > authorized_keys
 ```
 
-Then copy `authorized_keys` to other nodes of the cluster.
+Then copy `authorized_keys` to other nodes of the cluster.  
 
-##Add & configure Mesos ##
-
+## Add & Configure Mesos ##
 ### Env Of Mesos ###
 
 ```bash
@@ -176,7 +175,7 @@ Masters: the name or IP of master
 Slaves: the name or IP of slaves.  
 ```
 
-2.`Mesos-master-env.sh`
+2.`mesos-master-env.sh`
 About the configuration of master env.   
 
 ```bash
@@ -184,7 +183,7 @@ export MESOS_log_dir=/var/log/mesos “log into”
 export MESOS_work_dir=/var/lib/mesos “metadata into”  
 ```
 
-3.`Mesos-slave-env.sh`
+3.`mesos-slave-env.sh`
 About the configuration of slave env.  
 
 ```bash
@@ -194,7 +193,7 @@ export MESOS_work_dir=/var/run/mesos “for frameworks, default /tmp/mesos”
 export MESOS_containerizers=docker,mesos  
 ```
 
-4.`Mesos-deploy.sh` 
+4.`mesos-deploy.sh` 
 Change nothing. Copy from the template.  
 
 ```bash
@@ -258,6 +257,8 @@ Start zookpeer
 ```
 
 ### Slave on docker ###
+
+**Test:**
 
 ```json
 $vim nginx.json
