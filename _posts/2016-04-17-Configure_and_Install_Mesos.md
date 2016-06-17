@@ -3,6 +3,7 @@ layout: post
 title: Configure and Install Mesos
 description: "The trouble when install Mesos on Fedora 23 or RHEL 7.1"
 comments: true
+reading_time: true
 modified: 2016-04-17
 tags: [Mesos]
 image:

@@ -2,6 +2,7 @@
 layout: post
 title: The Framework Of Mesos
 description: "Learning Mesos"
+reading_time: true
 modified: 2016-05-28
 tags: [Mesos Framework]
 image:

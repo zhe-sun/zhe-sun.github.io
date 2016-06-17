@@ -2,6 +2,7 @@
 layout: post
 title: Bash Script
 description: "Learning Bash Script"
+reading_time: true
 modified: 2016-06-03
 tags: [Bash]
 image:

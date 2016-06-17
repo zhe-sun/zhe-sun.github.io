@@ -4,7 +4,7 @@ title: About ME
 image:
   feature: abstract-5.jpg
   credit: Sunzhe
-comments: true
+comments: false
 modified: 2016-06-17
 
 ---
