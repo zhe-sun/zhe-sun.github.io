@@ -160,6 +160,7 @@ $cat id_rsa.pub > authorized_keys
 Then copy `authorized_keys` to other nodes of the cluster.  
 
 ## Add & Configure Mesos ##
+
 ### Env Of Mesos ###
 
 ```bash
