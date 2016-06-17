@@ -6,7 +6,7 @@ comments: true
 modified: 2016-06-15T15:27:45-04:00
 tags: [Mesos DC/OS]
 image:
-  feature: abstract-10.jpg
+  feature: abstract-5.jpg
 
 ---
 
