@@ -86,40 +86,32 @@ $ cat ${HOME}/.m2/settings.xml
 Install `socat` .e.g. on SUSE  
 
 ```bash
-$ zypper in socat
+$ yum install socat
 ```
 
-Download this file:
+New-build this file `gitproxy`:
 
 ```
-#!/bin/sh
-# Use socat to proxy git through an HTTP CONNECT firewall.
-# Useful if you are trying to clone git:// from inside a company.
-# Requires that the proxy allows CONNECT to port 9418.
-#
-# Save this file as gitproxy somewhere in your path (e.g., ~/bin) and then run
-#   chmod +x gitproxy
-#   git config --global core.gitproxy gitproxy
-#
-# More details at http://tinyurl.com/8xvpny
-	# Configuration. Common proxy ports are 3128, 8123, 8000.
-_proxy=proxy.yourcompany.com
-_proxyport=3128
+$ sudo vi /usr/bin/gitproxy
+#!/bin/bash
 
-exec socat STDIO PROXY:$_proxy:$1:$2,proxyport=$_proxyport
-
-rename its name as gitproxy, and modify _proxy and _proxyport.
-Copy it into your PATH, e.g. /usr/bin.
-Than 
-# chmod +x gitproxy
-# git config --global core.gitproxy gitproxy
+PROXY=xxx.xxxx.com
+PROXYPORT=8080
+PROXYAUTH=username:password  # If you have one.
+exec socat STDIO PROXY:$PROXY:$1:$2,proxyport=$PROXYPORT,proxyauth=$PROXYAUTH
+```
+Then,
+```
+$ sudo  chmod +x /usr/bin/gitproxy
+$ chmod +x gitproxy
+$ git config --global core.gitproxy gitproxy
 ```
 
 Or execute the command in cmd-line:  
 
 ```bash	
-git config --globall http_proxy=http://xxx-xxx.com:8080/
-git config --globall https_proxy=https://xxx-xxx.com:8080/  
+git config --global http.proxy http://xxx-xxx.com:8080/
+git config --global https.proxy https://xxx-xxx.com:8080/
 ```
 
 Add docker.repo for yum  
