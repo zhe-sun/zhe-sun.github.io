@@ -91,7 +91,7 @@ $ yum install socat
 
 New-build this file `gitproxy`:
 
-```
+```bash
 $ sudo vi /usr/bin/gitproxy
 #!/bin/bash
 
@@ -100,8 +100,9 @@ PROXYPORT=8080
 PROXYAUTH=username:password  # If you have one.
 exec socat STDIO PROXY:$PROXY:$1:$2,proxyport=$PROXYPORT,proxyauth=$PROXYAUTH
 ```
-Then,
-```
+Then,  
+
+```bash
 $ sudo  chmod +x /usr/bin/gitproxy
 $ chmod +x gitproxy
 $ git config --global core.gitproxy gitproxy
