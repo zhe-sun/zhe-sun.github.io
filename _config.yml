@@ -5,11 +5,11 @@ reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-        url:		https://zhe-sun.github.io
+url: https://zhe-sun.github.io
 
 # Owner/author information
 owner:
-  name:           Sun-Zhe
+  name:           Zhe-Sun
   avatar:         sunzhe.png
   bio:            "Whatever is worth doing is worth doing well."
   email:          sunzhe.micro@gmail.com
