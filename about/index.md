@@ -18,6 +18,6 @@ Whatever is worth doing is worth doing well.
 
 Others are coming...
 
-<div markdown="0"><a href="{{ site.url }}/_posts/" class="btn btn-info">Posts</a> <a href="https://github.com/Sun-zhe" class="btn btn-success">Github</a></div>
+<div markdown="0"><a href="{{ site.url }}/_posts/" class="btn btn-info">Posts</a> <a href="https://github.com/zhe-sun" class="btn btn-success">Github</a></div>
 
 [^1]: Example: *domain.com/category-name/post-title*
