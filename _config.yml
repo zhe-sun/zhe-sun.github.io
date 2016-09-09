@@ -1,4 +1,4 @@
-title:    Ryan S. Blog
+title:            Ryan S. Blog
 description:      Whatever is worth doing is worth doing well.
 disqus_shortname: ryan-sun 
 reading_time:     true
@@ -9,7 +9,7 @@ url: https://zhe-sun.github.io
 
 # Owner/author information
 owner:
-  name:           Zhe
+  name:           Sun-Zhe
   avatar:         sunzhe.png
   bio:            "Whatever is worth doing is worth doing well."
   email:          sunzhe.micro@gmail.com
