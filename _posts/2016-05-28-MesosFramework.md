@@ -14,7 +14,7 @@ image:
 <h1>Mesos Frameworks</h1>
 <h2>Frameworks</h2>
    <strong>The Architecture of Mesos:</strong>  
-![mesos-architecture.jpg](https://raw.githubusercontent.com/zhe-sun/sun-zhe.github.io/master/images/mesos-architecture.jpg)  
+![mesos-architecture.jpg](https://raw.githubusercontent.com/zhe-sun/zhe-sun.github.io/master/images/mesos-architecture.jpg)  
    Apache Mesos is offen explained as being a kernel for data-centre, meaning that cluster resources (CPU, GPU, RAM, Disk...) are tracked ad offered to "user space" programs(i.e Frameworks) to do computations on the cluster.
    From the above figure <Mesos-Architecture>, we have one elected master that track resources on slaves and offer these resources to frameworks. Frameworks can take the offers and use this to launch a task on the slaves. These tasks run on an executor usually the built-in. Command Executor, that manages the task for us on the machine. So the framwork itself is actually a type of scheduler.  
 
@@ -23,23 +23,23 @@ image:
 
    If we want wo develop our own Framework, the Library and the Interface below need to be included.  
 <strong>-</strong> *The Scheduler Library Of Mesos*  
-![SchedulerLibraryOfMesos.png](https://raw.githubusercontent.com/zhe-sun/sun-zhe.github.io/master/images/mesos/SchedulerLibraryOfMesos.png)
+![SchedulerLibraryOfMesos.png](https://raw.githubusercontent.com/zhe-sun/zhe-sun.github.io/master/images/mesos/SchedulerLibraryOfMesos.png)
 
 <strong>-</strong> *The Executor Library Of Mesos*  
-![ExecutorLibraryOfMesos.png](https://raw.githubusercontent.com/zhe-sun/sun-zhe.github.io/master/images/mesos/ExecutorLibraryOfMesos.png)
+![ExecutorLibraryOfMesos.png](https://raw.githubusercontent.com/zhe-sun/zhe-zhe.github.io/master/images/mesos/ExecutorLibraryOfMesos.png)
 
 <strong>-</strong> *The FrameworkScheduler Interface*  
-![SchedulerInterface.png](https://raw.githubusercontent.com/zhe-sun/sun-zhe.github.io/master/images/mesos/SchedulerInterface.png)
+![SchedulerInterface.png](https://raw.githubusercontent.com/zhe-sun/zhe-sun.github.io/master/images/mesos/SchedulerInterface.png)
   
 <strong>-</strong> *The FrameworkExecutor Interface*  
-![ExecutorInterface.png](https://raw.githubusercontent.com/zhe-sun/sun-zhe.github.io/master/images/mesos/ExecutorInterface.png)
+![ExecutorInterface.png](https://raw.githubusercontent.com/zhe-sun/zhe-sun.github.io/master/images/mesos/ExecutorInterface.png)
 
 <strong>-</strong> *Run FrameworkScheduler*  
-![runFramework.png](https://raw.githubusercontent.com/zhe-sun/sun-zhe.github.io/master/images/mesos/runFramework.png)
+![runFramework.png](https://raw.githubusercontent.com/zhe-sun/zhe-sun.github.io/master/images/mesos/runFramework.png)
 
 
 <strong>-</strong> *Run FrameworkExecutor*  
-![runExecutor.png](https://raw.githubusercontent.com/zhe-sun/sun-zhe.github.io/master/images/mesos/runExecutor.png)
+![runExecutor.png](https://raw.githubusercontent.com/zhe-sun/zhe-sun.github.io/master/images/mesos/runExecutor.png)
 
    The first thing a Framework insterting into Mesos is to prepare two stuffs:
 
