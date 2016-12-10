@@ -23,19 +23,19 @@ Like the `#` operator, the `##` operator can be used in the replacement section 
 
 For example, you could do this: 
 
-```C
+```shell
 #define XNAME(n) x ## n
 ```
 
 Then the macro: 
 
-```C
+```shell
 XNAME(4)
 ```
 
 would expand to the following: 
 
-```C
+```shell
 x4
 ```
 Listing 1 uses this and another macro using `##` to do a bit of token gluing. 
