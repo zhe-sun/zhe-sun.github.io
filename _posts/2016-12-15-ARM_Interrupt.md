@@ -62,10 +62,10 @@ ENABLE_IRQ
 
 ```
 DISABLE_IRQ
-    MRS    R0， CPSR                          ; 将CPSR寄存器内容读出到R0
-    ORR    R0， R0，#0x80    ; 设置CPSR中的I控制位
-    MSR    CPSR_c，R0          ; 将修改后的值写回 CPSR寄存器的对应控制域
-    MOV    PC，LR                          ; 返回上一层函数
+    MRS    R0， CPSR				; 将CPSR寄存器内容读出到R0
+    ORR    R0， R0，#0x80		; 设置CPSR中的I控制位
+    MSR    CPSR_c，R0			; 将修改后的值写回 CPSR寄存器的对应控制域
+    MOV    PC，LR 				; 返回上一层函数
 ```
 
 ### BIC & ORR ###
@@ -96,13 +96,13 @@ ORR指令用于在两个操作数上进行逻辑或运算，并把结果放置�
 指令示例：
 
 ```
-ORR R0，R0，＃3          ；  该指令设置R0的0、1位，其余位保持不变。
+ORR R0，R0，＃3          ;  该指令设置R0的0、1位，其余位保持不变。
 ```
 
 ```
 orr r0, r0, #0xd3		; 0xd3 = 1101 0011
 						; 将r0与0xd3作算数或运算，然后将结果返还给r0,
-						; 即把r0的bit[7:6]和bit[4]和bit[2:0]置为1。
+					; 即把r0的bit[7:6]和bit[4]和bit[2:0]置为1。
 
 ```
 
