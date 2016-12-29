@@ -57,20 +57,24 @@ ARM处理器工作模式一共有 7 种 ：
 ### ARM异常中断处理概述 ###
 
 - **中断的概念** 
+
 中断是一个过程，是CPU在执行当前程序的过程中因硬件或软件的原因插入了另一段程序运行的过程。因硬件原因引起的中断过程的出现是不可预测的，即随机的，而软中断是事先安排的。
 
 - **中断源的概念**
+
 我们把可以引起中断的信号源称之为中断源
 
 - **中断优先级的概念**
+
 ARM处理器中有7种类型的异常，按优先级从高到低的排列如下：
-> 复位异常（Reset）
-> 数据异常（Data Abort）
-> 快速中断异常（FIQ）
-> 外部中断异常（IRQ）
-> 预取异常（Prefetch Abort）
-> 软件中断(SWI)
-> 未定义指令异常（Undefined instruction）
+
+ * 复位异常（Reset）
+ * 数据异常（Data Abort）
+ * 快速中断异常（FIQ）
+ * 外部中断异常（IRQ）
+ * 预取异常（Prefetch Abort）
+ * 软件中断(SWI)
+ * 未定义指令异常（Undefined instruction）
 
 ### ARM体系异常种类细说 ###
 
@@ -79,22 +83,22 @@ ARM处理器中有7种类型的异常，按优先级从高到低的排列如下�
 当处理器的复位引脚有效时，系统产生复位异常中断，程序跳转到复位异常中断处理程序处执行。
 复位异常中断通常用在下面两种情况下。 
 
-> 系统上电
-> 统复位
+ * 系统上电
+ * 统复位
 
 当复位异常时，系统执行下列伪操作：
 
 ```
-R14_svc = UNPREDICTABLE value    //任意值
-SPSR_svc = UNPREDICTABLE value  //任意值
-CPSR[4∶0] = 0b10011  /*进入管理模式*/ 
-CPSR[5] = 0    /*处理器进入ARM状态*/ 
-CPSR[6] = 1    /*禁止快速中断*/ 
-CPSR[7] = 1    /*禁止外设中断*/ 
-If high vectors configured then 
-PC = 0xffff0000 
-    Else 
-PC = 0x00000000
+   R14_svc = UNPREDICTABLE value    //任意值
+   SPSR_svc = UNPREDICTABLE value  //任意值
+   CPSR[4∶0] = 0b10011  /*进入管理模式*/ 
+   CPSR[5] = 0    /*处理器进入ARM状态*/ 
+   CPSR[6] = 1    /*禁止快速中断*/ 
+   CPSR[7] = 1    /*禁止外设中断*/ 
+   If high vectors configured then 
+     PC = 0xffff0000 
+       Else 
+     PC = 0x00000000
 ```
 
 复位异常中断处理程序的主要功能：
@@ -331,7 +335,7 @@ int_return:
 
 IRQ初始化函数：
 
-```C++
+```java
 
 void init_irq(void)
 {
@@ -359,7 +363,7 @@ void init_irq(void)
 
 中断处理函数：
 
-```C++
+```java
 
 void EINT_Handle(void)
 {
